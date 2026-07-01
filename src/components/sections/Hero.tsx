@@ -43,15 +43,15 @@ const Hero: React.FC = () => {
     <section className="w-full bg-white pt-12 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
         
-        {/* एनिमेटेड हेडिंग (Typing Effect - NO STYLE CHANGE) */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-800 tracking-tight min-h-[60px] flex flex-wrap justify-center items-center gap-2">
-          <span>Designed for</span>
-          <span className="relative bg-green-500 text-white px-3 py-1 rounded-md inline-block font-medium">
-            {currentText}
-            {/* ब्लिंकिंग कर्सर लाइन */}
-            <span className="absolute right-1 top-1/2 -translate-y-1/2 w-[2px] h-[70%] bg-white animate-pulse"></span>
-          </span>
-        </h1>
+      {/* एनिमेटेड हेडिंग (Typing Effect - Fully matching words, NO STYLE CHANGE) */}
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-800 tracking-tight min-h-[60px] flex flex-wrap justify-center items-center gap-2">
+        <span>Your Partner for</span>
+        <span className="relative bg-green-500 text-white px-3 py-1 rounded-md inline-block font-medium">
+          {currentText}
+          {/* ब्लिंकिंग कर्सर लाइन */}
+          <span className="absolute right-1 top-1/2 -translate-y-1/2 w-[2px] h-[70%] bg-white animate-pulse"></span>
+        </span>
+      </h1>
 
         {/* सब-डिस्क्रिप्शन - Adjusted to perfectly wrap in 2 to 3 lines using max-w-4xl */}
         <p className="mt-6 max-w-4xl text-gray-600 text-base md:text-lg leading-relaxed mx-auto">
