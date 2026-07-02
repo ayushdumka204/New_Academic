@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
               loop 
               muted 
               playsInline
-              src="https://assets.mixkit.co/videos/preview/mixkit-abstract-laser-lights-background-32120-large.mp4"
+              src="/Videos/Hero.mp4"
             />
           </div>
         </div>
