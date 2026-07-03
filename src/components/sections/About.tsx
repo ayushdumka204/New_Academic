@@ -1,104 +1,134 @@
-import { CheckCircle2, ArrowRight, Zap } from 'lucide-react'
-import { WHY_US } from '../../data/siteData'
-import { useScrollReveal } from '../../hooks/useScrollReveal'
+import React from 'react';
 
-export default function About() {
-  const textRef = useScrollReveal()
-  const cardsRef = useScrollReveal(120)
-
+const ResearchProcess: React.FC = () => {
   return (
-    <section id="about" className="section bg-white dark:bg-surface-dark-2">
-      <div className="wrap">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+    <section className="w-full bg-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 font-sans">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Main Section Heading */}
+        <div className="text-center mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#001C41] tracking-tight max-w-4xl mx-auto leading-tight">
+            Steps how NexGen Academic Research Conduct Data collection
+          </h2>
+        </div>
 
-          {/* Left */}
-          <div ref={textRef} className="reveal">
-            <div className="eyebrow mb-5">
-              <span className="w-5 h-px bg-brand-green" /> About NexGen
-            </div>
+        {/* Process Steps Containers */}
+        <div className="space-y-24 md:space-y-36">
 
-            <h2 className="display-xl text-3xl lg:text-[44px] text-brand-purple dark:text-white leading-tight mb-5">
-              Your Dedicated
-              <span className="block text-brand-green">Research Partner</span>
-            </h2>
-
-            <p className="muted text-[15px] leading-relaxed mb-4">
-              NexGen Academic Research Services Pvt Ltd is a premier academic research partner with over{' '}
-              <strong className="text-brand-purple dark:text-white font-semibold">20+ years of expertise</strong> in
-              high-quality data collection, field surveys, and data analysis — helping researchers achieve academic
-              excellence through innovative support.
-            </p>
-            <p className="muted text-[15px] leading-relaxed mb-8">
-              From project inception to questionnaire design, field execution, and final analysis, we stand by you at
-              every stage — ensuring your work meets international standards and is ready for publication.
-            </p>
-
-            {/* Feature tags */}
-            <div className="flex flex-wrap gap-2 mb-8">
-              {['2,000+ Field Experts', 'Expert Data Collection', 'Precise Field Surveys', 'Ethical Compliance', 'All Linguistic Support', 'On-Time Delivery'].map(t => (
-                <span key={t}
-                  className="px-3 py-1.5 text-xs font-mono tracking-wide rounded-full
-                             bg-brand-purple-muted dark:bg-white/5
-                             text-brand-purple dark:text-white/60
-                             border border-brand-purple/10 dark:border-white/8">
-                  {t}
-                </span>
-              ))}
-            </div>
-
-            <a href="#services" className="btn-ghost inline-flex group">
-              Explore Services
-              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div>
-
-          {/* Right */}
-          <div ref={cardsRef} className="reveal space-y-4">
-
-            {/* 24x7 card */}
-            <div className="card p-6 flex items-start gap-4">
-              <div className="w-10 h-10 rounded-xl shrink-0 flex items-center justify-center"
-                style={{ background: 'linear-gradient(135deg, #2c1161, #6d3dbd)' }}>
-                <Zap size={16} className="text-white" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-[11px] font-mono tracking-widest uppercase text-brand-green font-bold">
-                    24 × 7 Expert Help
-                  </span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse-slow" />
-                </div>
-                <h3 className="font-display font-bold text-[17px] text-brand-purple dark:text-white mb-1">
-                  Always On, Always Ready
-                </h3>
-                <p className="muted text-sm leading-relaxed">
-                  Research problems don't wait for office hours. Our expert team is available around the clock to keep your project on track.
-                </p>
-              </div>
-            </div>
-
-            {/* Why us grid */}
-            <div className="card p-6">
-              <h3 className="font-display font-bold text-[16px] text-brand-purple dark:text-white mb-5">
-                Why Researchers Choose NexGen
+          {/* STEP 1: Briefing from client */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-5 text-left">
+              <span className="text-xs font-bold tracking-wider text-blue-600 uppercase block mb-2">STEP 01</span>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight mb-4">
+                Briefing from client
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {WHY_US.map(item => (
-                  <div key={item} className="flex items-center gap-2.5">
-                    <CheckCircle2 size={13} className="text-brand-green shrink-0" />
-                    <span className="muted text-[13px]">{item}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-5 pt-4 border-t border-brand-purple/6 dark:border-white/5">
-                <p className="muted text-xs leading-relaxed">
-                  We don't just provide data — we give your research the quality and insights needed to meet international standards and get published.
-                </p>
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
+                In this first step, we connect with the client to understand their specific research goals, target audience, and core academic guidelines before starting the project.
+              </p>
+              <a href="#" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition">
+                Learn more <span>→</span>
+              </a>
+            </div>
+            {/* Gradient Border and White Inside */}
+            <div className="md:col-span-7 w-full rounded-2xl p-[3px] bg-gradient-to-br from-blue-600 to-cyan-400 shadow-2xl shadow-blue-100">
+              <div className="w-full aspect-video md:aspect-[16/10] bg-white rounded-xl flex items-center justify-center text-slate-400 font-medium">
+                [ Place Step 1 Image Here ]
               </div>
             </div>
           </div>
+
+          {/* STEP 2: Questionnaire design */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            {/* Gradient Border and White Inside */}
+            <div className="grid grid-cols-1 md:grid-cols-12 md:col-span-7 w-full rounded-2xl p-[3px] bg-gradient-to-br from-indigo-600 to-purple-500 shadow-2xl shadow-indigo-100 order-2 md:order-1">
+              <div className="col-span-12 w-full aspect-video md:aspect-[16/10] bg-white rounded-xl flex items-center justify-center text-slate-400 font-medium">
+                [ Place Step 2 Image Here ]
+              </div>
+            </div>
+            <div className="md:col-span-5 text-left order-1 md:order-2">
+              <span className="text-xs font-bold tracking-wider text-indigo-600 uppercase block mb-2">STEP 02</span>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight mb-4">
+                Questionnaire design
+              </h3>
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
+                Our experts structure and design a reliable questionnaire with precise metrics, items, and rating scales required to capture data effectively for your research variables.
+              </p>
+              <a href="#" className="inline-flex items-center gap-2 text-indigo-600 font-semibold hover:text-indigo-700 transition">
+                Learn more <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          {/* STEP 3: Digital Survey Link Created */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-5 text-left">
+              <span className="text-xs font-bold tracking-wider text-cyan-600 uppercase block mb-2">STEP 03</span>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight mb-4">
+                Digital Survey Link Created
+              </h3>
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
+                We transform the approved questionnaire into an optimized digital survey platform, creating responsive and clean online links to start tracking live responses.
+              </p>
+              <a href="#" className="inline-flex items-center gap-2 text-cyan-600 font-semibold hover:text-cyan-700 transition">
+                Learn more <span>→</span>
+              </a>
+            </div>
+            {/* Gradient Border and White Inside */}
+            <div className="md:col-span-7 w-full rounded-2xl p-[3px] bg-gradient-to-br from-cyan-500 to-blue-600 shadow-2xl shadow-cyan-100">
+              <div className="w-full aspect-video md:aspect-[16/10] bg-white rounded-xl flex items-center justify-center text-slate-400 font-medium">
+                [ Place Step 3 Image Here ]
+              </div>
+            </div>
+          </div>
+
+          {/* STEP 4: Pilot Survey Conduct */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            {/* Gradient Border and White Inside */}
+            <div className="grid grid-cols-1 md:grid-cols-12 md:col-span-7 w-full rounded-2xl p-[3px] bg-gradient-to-br from-violet-600 to-pink-500 shadow-2xl shadow-violet-100 order-2 md:order-1">
+              <div className="col-span-12 w-full aspect-video md:aspect-[16/10] bg-white rounded-xl flex items-center justify-center text-slate-400 font-medium">
+                [ Place Step 4 Image Here ]
+              </div>
+            </div>
+            <div className="md:col-span-5 text-left order-1 md:order-2">
+              <span className="text-xs font-bold tracking-wider text-violet-600 uppercase block mb-2">STEP 04</span>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight mb-4">
+                Pilot Survey Conduct
+              </h3>
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
+                Before full deployment, we execute a preliminary small-scale survey to check data validity, test scale reliability, and remove any anomalies from the questions.
+              </p>
+              <a href="#" className="inline-flex items-center gap-2 text-violet-600 font-semibold hover:text-violet-700 transition">
+                Learn more <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          {/* STEP 5: Final Data Collection */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-5 text-left">
+              <span className="text-xs font-bold tracking-wider text-emerald-600 uppercase block mb-2">STEP 05</span>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight mb-4">
+                Final Data Collection
+              </h3>
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
+                After the pilot run passes quality checks, we roll out full-scale data collection through our expansive ground networks to deliver accurate, 100% verified research data.
+              </p>
+              <a href="#" className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700 transition">
+                Learn more <span>→</span>
+              </a>
+            </div>
+            {/* Gradient Border and White Inside */}
+            <div className="md:col-span-7 w-full rounded-2xl p-[3px] bg-gradient-to-br from-emerald-500 to-teal-600 shadow-2xl shadow-emerald-100">
+              <div className="w-full aspect-video md:aspect-[16/10] bg-white rounded-xl flex items-center justify-center text-slate-400 font-medium">
+                [ Place Step 5 Image Here ]
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default ResearchProcess;

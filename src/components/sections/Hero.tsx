@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
   }, [currentText, isDeleting, currentWordIndex]);
 
   return (
-    <section className="w-full bg-white pt-12 pb-20 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white pt-12 pb-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
         
       {/* एनिमेटेड हेडिंग (Typing Effect - Fully matching words, NO STYLE CHANGE) */}
