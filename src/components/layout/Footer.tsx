@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
         <div className="md:col-span-4 flex flex-col gap-6">
           <div>
             <h2 className="text-xl font-bold text-white tracking-wide mb-4">
-              NexGen <span className="text-purple-500">Market Research</span>
+              NexGen Market Research
             </h2>
             <p className="text-sm text-slate-400 leading-relaxed text-justify text-justify-inter-word max-w-[320px]">
               Providing premium qualitative and quantitative data collection, advanced data analysis, and market insights worldwide.
