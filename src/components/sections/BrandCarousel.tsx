@@ -12,7 +12,7 @@ const BrandCarousel: React.FC = () => {
   ];
 
   return (
-    <div className="w-full bg-white pt-20 pb-24 overflow-hidden flex flex-col items-center justify-center">
+    <div className="w-full bg-white pt-12 pb-20 overflow-hidden flex flex-col items-center justify-center">
       
       {/* Heading Text */}
       <p className="text-center text-[20px] sm:text-[21px] font-semibold tracking-tight text-slate-900 max-w-3xl mx-auto mb-8 leading-relaxed">
