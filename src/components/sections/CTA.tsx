@@ -1,55 +1,60 @@
-import { ChevronRight, Mail } from 'lucide-react'
+import React from 'react';
 
-export default function CTA() {
+const ResearchHero: React.FC = () => {
   return (
-    <section id="contact" className="py-28 relative overflow-hidden bg-brand-purple dark:bg-surface-dark-2">
+    <section className="relative w-full h-[85vh] min-h-[500px] flex flex-col justify-center items-center px-4 overflow-hidden select-none">
+      
+      {/* Background Image Layer with Fallback Soft Gradient */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transform scale-105 transition-transform duration-1000 ease-out"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80')`,
+        }}
+      />
 
-      {/* Grid */}
-      <div className="absolute inset-0 mesh-grid opacity-30" />
+      {/* Subtle overlay for better text readability */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-white/20 via-transparent to-white/10 mix-blend-overlay" />
 
-      {/* Glow */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[700px] h-[300px] glow-green opacity-20" />
+      {/* Content Container */}
+      <div className="relative z-20 max-w-4xl mx-auto text-center flex flex-col items-center justify-center space-y-8">
+        
+        {/* Headline - Updated with your real data collection and academic workflow focus */}
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15] max-w-3xl drop-shadow-sm">
+          We help you collect verified data and accelerate your academic research
+        </h1>
+
+        {/* CTA Button */}
+        <button 
+          type="button"
+          onClick={() => console.log('Navigating to portal...')}
+          className="group relative inline-flex items-center justify-center bg-[#E31E24] hover:bg-[#C21419] text-white font-semibold text-sm md:text-base tracking-wide uppercase px-8 py-3.5 rounded shadow-md hover:shadow-lg active:scale-[0.98] transition-all duration-200 ease-out cursor-pointer"
+        >
+          <span>Start Your Field Project</span>
+          <svg 
+            className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-200 ease-out" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor" 
+            strokeWidth={2.5}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
       </div>
 
-      <div className="wrap relative z-10 text-center">
-        <div className="eyebrow justify-center mb-6">
-          <span className="w-5 h-px bg-brand-green" /> Start Today
-          <span className="w-5 h-px bg-brand-green" />
-        </div>
-
-        <h2 className="display-xl text-4xl lg:text-6xl text-white mb-5 leading-tight">
-          Ready to Elevate Your<br />
-          <span className="text-brand-green">Research Quality?</span>
-        </h2>
-
-        <p className="text-white/50 text-lg max-w-md mx-auto mb-10 font-light leading-relaxed">
-          Book a free consultation with our research experts — no commitment required,
-          just clarity on how we can support your academic goals.
-        </p>
-
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-14">
-          <a href="mailto:research@nexgen.ac.in"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm
-                       bg-brand-green text-white hover:bg-green-400 transition-all active:scale-95">
-            Book Free Consultation <ChevronRight size={15} />
-          </a>
-          <a href="mailto:research@nexgen.ac.in"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm
-                       border border-white/20 text-white hover:bg-white/8 transition-all active:scale-95">
-            <Mail size={14} /> Email Our Team
-          </a>
-        </div>
-
-        {/* Trust signals */}
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
-          {['No commitment required', 'Response within 24 hours', 'NDA on every project', '20+ years of expertise'].map(t => (
-            <span key={t} className="flex items-center gap-2 text-[11px] font-mono text-white/25 tracking-wide uppercase">
-              <span className="w-1 h-1 rounded-full bg-brand-green/50" /> {t}
-            </span>
-          ))}
-        </div>
+      {/* Optional Side Fixed Button (Like "Request Demo" in image) */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 z-30 hidden md:block">
+        <button 
+          type="button"
+          className="bg-[#0066FF] hover:bg-[#0052CC] text-white text-xs font-bold uppercase tracking-widest px-4 py-3 origin-bottom-right transform rotate-90 translate-x-[42px] -translate-y-1/2 transition-colors rounded-t-md shadow-md cursor-pointer"
+        >
+          Get Free Quote
+        </button>
       </div>
+
     </section>
-  )
-}
+  );
+};
+
+export default ResearchHero;

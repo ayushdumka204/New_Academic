@@ -6,6 +6,11 @@ import BrandCarousel from './components/sections/BrandCarousel'
 import About from './components/sections/About'
 import Stats from './components/sections/Stats'
 import Scroll from './components/sections/Scroll'
+import Leftrighscroll from './components/sections/Leftrighscroll'
+import Rightleft from './components/sections/Rightleft'
+import Team from './components/sections/Team'
+import FAQ from './components/sections/FAQ'
+import CTA from './components/sections/CTA'
 
 export default function App() {
   return (
@@ -14,11 +19,13 @@ export default function App() {
         <Navbar />
         <main>
           <Hero />
-          
            <Stats />
            <BrandCarousel />
-            <Scroll />
-          <About />
+           <Rightleft />
+           <Leftrighscroll />
+           <Team />
+           <FAQ />
+           <CTA />
          
         </main>
         <Footer />

@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
   }, [currentText, isDeleting, currentWordIndex]);
 
   return (
-    <section className="w-full bg-white pt-12 pb-8 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white pt-16 pb-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
         
       {/* एनिमेटेड हेडिंग (Typing Effect - Fully matching words, NO STYLE CHANGE) */}
@@ -53,17 +53,22 @@ const Hero: React.FC = () => {
         </span>
       </h1>
 
-        {/* सब-डिस्क्रिप्शन - Adjusted to perfectly wrap in 2 to 3 lines using max-w-4xl */}
-        <p className="mt-6 max-w-4xl text-gray-600 text-base md:text-lg leading-relaxed mx-auto">
+        {/* सब-डिस्क्रिप्शन - Scaled up font sizes to look more prominent and premium */}
+        <p className="mt-8 max-w-5xl text-gray-900 text-lg md:text-[22px] leading-relaxed md:leading-[1.45] mx-auto text-center font-normal tracking-tight">
           <strong className="text-gray-900 font-semibold">NexGen Academic Research Platform</strong> empowers scholars and researchers with end-to-end support in 
-          <span className="text-cyan-500 font-medium"> Data collection</span>, 
-          <span className="text-purple-500 font-medium"> Precise Field Surveys</span>, and advanced 
-          <span className="text-orange-400 font-medium"> Statistical Tools</span> to ensure your study is grounded in high-quality, verified insights. 
-          <span className="text-indigo-600 font-medium"> Verified Raw Field Data.</span>
+          <span className="text-cyan-500 font-semibold"> Data collection</span>, 
+          <span className="text-purple-500 font-semibold"> Precise Field Surveys</span>, and advanced 
+          <span className="text-orange-500 font-semibold"> Statistical Tools</span> to ensure your study is grounded in high-quality, verified insights. 
         </p>
 
+        {/* बटन */}
+        <button className="mt-10 px-8 py-3 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition shadow-md hover:shadow-lg flex items-center gap-2 text-base">
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clipRule="evenodd"/></svg>
+          Book a Free Consultation
+        </button>
+
         {/* बड़ा वीडियो कंटेनर (NO STYLE CHANGE) */}
-        <div className="mt-8 w-full max-w-6xl rounded-2xl p-2 sm:p-3 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 shadow-2xl shadow-purple-200/50">
+        <div className="mt-16 w-full max-w-6xl rounded-2xl p-2 sm:p-3 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 shadow-2xl shadow-purple-200/50">
           <div className="w-full rounded-xl overflow-hidden bg-gray-50 aspect-video md:aspect-[21/9] border border-white/20">
             <video 
               className="w-full h-full object-cover" 
@@ -109,16 +114,26 @@ const Hero: React.FC = () => {
 
         </div>
 
-        {/* मुख्य कॉल-टू-एक्शन हेडिंग */}
-        <h2 className="mt-8 text-xl md:text-2xl font-semibold text-gray-900 tracking-tight">
-          Empowering researchers, scholars, and academicians with international standards
-        </h2>
-
-        {/* बटन */}
-        <button className="mt-6 px-8 py-3 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition shadow-md hover:shadow-lg flex items-center gap-2 text-base">
-          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clipRule="evenodd"/></svg>
-          Book a Free Consultation
-        </button>
+{/* मुख्य कॉल-टू-एक्शन हेडिंग - Increased font size and crisp, short text with matching icon */}
+<h2 className="mt-8 text-2xl sm:text-3xl md:text-[32px] font-bold text-gray-900 tracking-tight flex items-center justify-center gap-4 leading-tight">
+  {/* Light Blue Circle Wrapper with Green Upward Arrow */}
+  <span className="w-10 h-10 md:w-11 md:h-11 bg-[#F0F7FF] rounded-full flex items-center justify-center shrink-0 shadow-sm">
+    <svg 
+      className="w-5 h-5 md:w-6 md:h-6 text-[#00C853]" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="3.2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    >
+      <line x1="7" y1="17" x2="17" y2="7"></line>
+      <polyline points="7 7 17 7 17 17"></polyline>
+    </svg>
+  </span>
+  
+  <span>Empowering researchers with international standards</span>
+</h2>
 
       </div>
     </section>
